@@ -5,6 +5,7 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 300px;
 
     p {
         font-size: 18px;
