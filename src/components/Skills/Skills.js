@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+const Section = styled.section`
+    margin-bottom: 300px;
+`
+
 const Header = styled.section`
     display: flex;
 `
@@ -61,7 +65,7 @@ const OutrosItem = styled.li`
 
 const Skills = () => {
     return (
-        <section>
+        <Section>
         <Header>
             <Titulo>Skills</Titulo>
             <Linha></Linha>
@@ -115,7 +119,7 @@ const Skills = () => {
                 Jquery
             </OutrosItem>
         </ListaOutros>
-    </section>
+    </Section>
     )
 }
 
