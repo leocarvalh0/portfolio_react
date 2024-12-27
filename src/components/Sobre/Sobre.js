@@ -44,6 +44,11 @@ const Foto = styled.img`
     height: 500px;
     margin-left: 50px;
     box-shadow: 10px 10px rgb(11, 131, 95);
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 20px 20px rgb(11, 131, 95);
+    }
 `
 
 const ButtonsContainer = styled.div`

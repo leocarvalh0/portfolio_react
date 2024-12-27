@@ -46,6 +46,12 @@ const Item = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        color: #06c58c;
+    }
 
     p {
         color: #fff;
@@ -78,6 +84,32 @@ const Skills = () => {
             <Titulo>Skills</Titulo>
             <Linha></Linha>
         </Header>
+        <SkillsContainer>
+            <Item>
+                <p>HTML</p>
+                <Icon as={ImHtmlFive2} />
+            </Item>
+            <Item>
+                <p>CSS</p>
+                <Icon as={SiCss3} />
+            </Item>
+            <Item>
+                <p>JavaScript</p>
+                <Icon as={LiaJsSquare} />
+            </Item>
+            <Item>
+                <p>React</p>
+                <Icon as={FaReact} />
+            </Item>
+            <Item>
+                <p>Sass</p>
+                <Icon as={FaSass} />
+            </Item>
+            <Item>
+                <p>Figma</p>
+                <Icon as={FaFigma} />
+            </Item>         
+        </SkillsContainer>
         <SkillsContainer>
             <Item>
                 <p>HTML</p>
