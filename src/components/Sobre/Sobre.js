@@ -12,6 +12,7 @@ const Titulo = styled.h2`
     font-size: 30px;
     margin-bottom: 80px;
     color: #ccd6f6;
+    font-family: 'Pixelify Sans', sans-serif;
     
     &::before {
         content: ".";
@@ -42,7 +43,27 @@ const Texto = styled.p`
 const Foto = styled.img`
     height: 500px;
     margin-left: 50px;
-    box-shadow: 10px 10px 0 #06c58c;
+    box-shadow: 10px 10px rgb(11, 131, 95);
+`
+
+const ButtonsContainer = styled.div`
+    display: flex;
+    margin-top: 60px;
+`
+const Button = styled.button`
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #06c58c;
+    color: #06c58c;
+    margin-right: 42px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px) translateX(-5px);
+        box-shadow: 5px 5px 0 #06c58c;
+    }
 `
 
 const Sobre = () => {
@@ -55,8 +76,11 @@ const Sobre = () => {
         <Infos>
             <div>
                 <Texto>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus sed velit sint ut voluptates necessitatibus sapiente perferendis voluptate? Distinctio excepturi nostrum corporis, beatae sapiente veniam ut velit eos error? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quam error tenetur vel quia reprehenderit provident beatae libero. Voluptatibus amet vitae voluptas, dolorem quisquam sapiente sit reiciendis itaque nihil quasi.</Texto>
-                <Texto>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus sed velit sint ut voluptates necessitatibus sapiente perferendis voluptate? Distinctio excepturi nostrum corporis, beatae sapiente veniam ut velit eos error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laboriosam doloremque.</Texto>
                 <Texto>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus sed velit sint ut voluptates necessitatibus sapiente perferendis voluptate? Distinctio excepturi nostrum corporis, beatae sapiente veniam ut velit eos error?</Texto>
+                <ButtonsContainer>
+                    <Button>Entrar em contato</Button>
+                    <Button>Dowload CV</Button>
+                </ButtonsContainer>
             </div>
             <Foto src="/images/eu.jpg" alt="Minha foto" />
         </Infos>

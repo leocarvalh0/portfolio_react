@@ -8,7 +8,7 @@ const EstiloGlobal = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-size: 62.5%;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Raleway", serif;
         background-color: #17183B;
         color: #8892b0;
     }

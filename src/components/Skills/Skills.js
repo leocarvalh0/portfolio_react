@@ -1,5 +1,13 @@
 import styled from "styled-components"
 
+import { ImHtmlFive2 } from "react-icons/im";
+import { SiCss3 } from "react-icons/si";
+import { LiaJsSquare } from "react-icons/lia";
+import { FaReact } from "react-icons/fa";
+import { FaSass } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
+
+
 const Section = styled.section`
     margin-bottom: 300px;
 `
@@ -11,6 +19,7 @@ const Titulo = styled.div`
     font-size: 30px;
     margin-bottom: 80px;
     color: #ccd6f6;
+    font-family: 'Pixelify Sans', sans-serif;
 
     &::before {
         content: ".";
@@ -26,41 +35,40 @@ const Linha = styled.div`
     margin-top: 20px;
     margin-left: 30px;
 `
-const SubTitulo = styled.h3`
-    font-size: 20px;
+
+const Item = styled.div`
+    background-color: #202142;
+    width: 120px;
+    height: 120px;
+    border-bottom: 4px solid #06c58c; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+    }
 `
-const ListaPrincipais = styled.ul`
-    width: 100%;
+
+const Icon = styled.div`
+    background-color: transparent;
+    font-size: 40px;
+    fill: #fff;
+    margin-top: 16px;
+
+    @media screen and (max-width: 970px) {
+        font-size: 2.0rem;
+    }
+`
+
+const SkillsContainer = styled.div`
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    margin-bottom: 80px;
-`
-const PrincipaisItem = styled.li`
-    margin-right: 16px;
-
-    img {
-        width: 60px;
-        
-        &:hover {
-            transform: translateY(-5px);
-            transition: .3s;
-        }
-    }
-`
-const ListaOutros = styled.ul`
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-`
-const OutrosItem = styled.li`
-    font-size: 18px;
-    margin-bottom: 16px;
-
-    &:hover {
-        color: #06c58c;
-        transform: translateY(-2px);
-    }
+    margin-top: 80px;
 `
 
 const Skills = () => {
@@ -70,55 +78,32 @@ const Skills = () => {
             <Titulo>Skills</Titulo>
             <Linha></Linha>
         </Header>
-        <SubTitulo>Principais conhecimentos:</SubTitulo>
-        <ListaPrincipais>
-            <PrincipaisItem>
-                <img src="images/html.png" alt=""/>
-            </PrincipaisItem>
-            <PrincipaisItem>
-                <img src="images/css.png" alt=""/>
-            </PrincipaisItem>
-            
-            <PrincipaisItem>
-                <img src="images/folder.png" alt=""/>
-            </PrincipaisItem>
-            <PrincipaisItem>
-                <img src="images/physics.png" alt=""/>
-            </PrincipaisItem>
-        </ListaPrincipais>
-        <SubTitulo>Outros conhecimentos:</SubTitulo>
-        <ListaOutros>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Bootstrap
-            </OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                APIs
-            </OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                TypeScript
-            </OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Gulp e Grunt</OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Git
-            </OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Redux
-            </OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Sass e Less</OutrosItem>
-            <OutrosItem>
-                <ion-icon name="caret-forward-outline"></ion-icon>
-                Jquery
-            </OutrosItem>
-        </ListaOutros>
+        <SkillsContainer>
+            <Item>
+                <p>HTML</p>
+                <Icon as={ImHtmlFive2} />
+            </Item>
+            <Item>
+                <p>CSS</p>
+                <Icon as={SiCss3} />
+            </Item>
+            <Item>
+                <p>JavaScript</p>
+                <Icon as={LiaJsSquare} />
+            </Item>
+            <Item>
+                <p>React</p>
+                <Icon as={FaReact} />
+            </Item>
+            <Item>
+                <p>Sass</p>
+                <Icon as={FaSass} />
+            </Item>
+            <Item>
+                <p>Figma</p>
+                <Icon as={FaFigma} />
+            </Item>         
+        </SkillsContainer>
     </Section>
     )
 }

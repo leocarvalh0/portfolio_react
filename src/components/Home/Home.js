@@ -80,12 +80,13 @@ const Descricao = styled.p`
     } 
 `
 const Botao = styled.button`
-    width: 360px;
+    width: 320px;
     height: 60px;
     border-radius: 8px;
     border: 1px solid #06c58c;
     font-size: 16px;
-    letter-spacing: 4px;
+    font-weight: bold;
+    letter-spacing: 2px;
     padding: 18px;
     background-color: transparent;
     color: #06c58c;     
