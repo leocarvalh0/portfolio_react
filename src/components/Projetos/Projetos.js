@@ -1,22 +1,22 @@
-import styled from "styled-components"
-import { FaGithub  } from "react-icons/fa";
-import { IoLogoVercel } from "react-icons/io5";
+import styled, { css } from "styled-components";
+import { FaGithub } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
 
-const Projetos = () => {
-    
 const Section = styled.section`
     margin-bottom: 300px;
-    background-color: #fff;
-`
+`;
 
-const Header = styled.section`
+    const Header = styled.header`
     display: flex;
-`
-const Titulo = styled.div`
+    margin-bottom: 80px;
+`;
+
+const Titulo = styled.h2`
     font-size: 30px;
     margin-bottom: 80px;
     color: #ccd6f6;
-
+    font-family: 'Pixelify Sans', sans-serif;
+    
     &::before {
         content: ".";
         width: 2px;
@@ -24,6 +24,7 @@ const Titulo = styled.div`
         background-color: #06c58c;
     }
 `
+
 const Linha = styled.div`
     background-color: rgb(68, 68, 68);
     width: 300px;
@@ -32,187 +33,118 @@ const Linha = styled.div`
     margin-left: 30px;
 `
 
-const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
-`
-
-const Card = styled.div`
-    width: 350px;
-    padding: 24px;
-    background-color: #141532;
+const ContainerBase = styled.div`
+    display: flex;
+    flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+    align-items: center;
+    margin-bottom: 150px;
 
     img {
-        width: 302px;
-        height: 180px;
-        margin: 0 auto;
-        margin-bottom: 32px;
-    }
-`
+        width: 480px;
+        height: 300px;
+        box-shadow: 10px 10px rgb(172, 172, 172);
+        transition: box-shadow 0.3s ease;
 
-const CardTitulo = styled.h4`
+        &:hover {
+            box-shadow: 20px 20px rgb(11, 131, 95);
+        }
+    }
+`;
+
+const ProjetoBase = styled.div`
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: ${({ reverse }) => (reverse ? "left" : "right")};
+    margin: ${({ reverse }) => (reverse ? "0 0 0 70px" : "0 70px 0 0")};
+`;
+
+const TituloProjeto = styled.h3`
     font-size: 24px;
-    font-weight: normal;
     letter-spacing: 2px;
     color: #fff;
-    margin-bottom: 32px;
-    background-color: #141532;
-`
+`;
 
 const Descricao = styled.p`
     font-size: 16px;
-    margin-bottom: 24px;
-    letter-spacing: 3px;
-    line-height: 20px;
-    background-color: #141532;
-`
+    color: #ccd6f6;
+`;
 
-const Mais = styled.p`
-    font-size: 12px;
-    text-align: right;
-    margin-bottom: 24px;
-    background-color: #141532;
-`
-
-const CardLinha = styled.div`
-    background-color: rgb(68, 68, 68);
-    width: 302px;
-    height: 2px;
-    margin-bottom: 40px;
-`
-
-const CardLinks = styled.div`
+const Tecnologias = styled.div`
     display: flex;
-    background-color: #141532;
-`
+    justify-content: ${({ reverse }) => (reverse ? "flex-start" : "flex-end")};
+    gap: 16px;
 
-const Item = styled.div`
-    font-size: 16px;
-    color: #fff;
-    display: flex;
-    margin-right: 80px;
-    background-color: #141532;
-`
+    span {
+        font-size: 14px;
+        color: #fff;
+    }
+`;
 
 const Icon = styled.div`
     font-size: 24px;
     fill: #06c58c;
-    margin-right: 16px;
-`
+    margin-top: 16px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    text-align: ${({ reverse }) => (reverse ? "left" : "right")};
+    margin: ${({ reverse }) => (reverse ? "0 16px 0 0" : "0 0 0 16px")};
 
-    return (
-        <Section>
-            <Header>
-                <Titulo>Projetos</Titulo>
-                <Linha></Linha>
-            </Header>
-            <Container>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-                <Card>
-                    <img src="images/image.png" alt="Clone Disney+" />
-                    <CardTitulo># Clone Disney+</CardTitulo>
-                    <Descricao>Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada.</Descricao>
-                    <Mais>Saiba mais...</Mais>
-                    <CardLinha></CardLinha>
-                    <CardLinks>
-                        <Item>
-                            <Icon as={FaGithub} />                  
-                            Github
-                        </Item>
-                        <Item>
-                            <Icon as={IoLogoVercel} />                  
-                            Github
-                        </Item>
-                    </CardLinks>
-                </Card>
-            </Container>
-        </Section>
-    )
-}
+    &:hover {
+        transform: translateY(-5px);
+    }
 
-export default Projetos
+    @media screen and (max-width: 970px) {
+        font-size: 2rem;
+    }
+`;
+
+const Projeto = ({ title, description, technologies, reverse, image }) => (
+    <ContainerBase reverse={reverse}>
+        <ProjetoBase reverse={reverse}>
+            <TituloProjeto>{title}</TituloProjeto>
+            <Descricao>{description}</Descricao>
+            <Tecnologias reverse={reverse}>
+                {technologies.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                ))}
+            </Tecnologias>
+            <div>
+                <Icon reverse={reverse} as={GoLinkExternal} />
+                <Icon as={FaGithub} />
+            </div>
+        </ProjetoBase>
+        <img src={image} alt={`${title} screenshot`} />
+    </ContainerBase>
+);
+
+const Projetos = () => (
+    <Section>
+        <Header>
+            <Titulo>Projetos</Titulo>
+            <Linha />
+        </Header>
+        <Projeto
+            title="Clone Disney+"
+            description="Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            technologies={["HTML", "CSS", "JavaScript"]}
+            image="images/disney.png"
+        />
+        <Projeto
+            title="Site para restaurante"
+            description="Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            technologies={["React", "Styled-components"]}
+            image="images/restaurante.png"
+            reverse
+        />
+        <Projeto
+            title="Lista de tarefas"
+            description="Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            technologies={["Vue"]}
+            image="images/tarefas.png"
+        />
+    </Section>
+);
+
+export default Projetos;
