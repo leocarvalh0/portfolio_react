@@ -26,22 +26,22 @@ const Saudacao = styled.p`
     text-transform: uppercase;
 `
 const Titulo = styled.h1`
-    font-size: 60px;
+    font-size: 6.0rem;
     margin-top: 24px;
     color: #ccd6f6;
     font-family: 'Pixelify Sans', sans-serif;
     text-transform: uppercase;
 
     @media screen and (max-width: 1024px) {
-        font-size: 50px;
+        font-size: 5.0rem;
     }
 
     @media screen and (max-width: 768px) {
-        font-size: 40px;
+        font-size: 4.0rem;
     }
 
     @media screen and (max-width: 482px) {
-        font-size: 31px;
+        font-size: 3.0rem;
         margin-top: 16px;
     }
 `

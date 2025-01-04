@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 const Cabecalho = styled.header`
@@ -42,7 +43,7 @@ const NavList = styled.ul`
     padding: 10px;
             
     @media screen and (max-width: 970px) {
-        display: none;
+        display: ${({ estaAtivo }) => estaAtivo ? "flex" : "none"};
         position: absolute;
         flex-direction: column;
         justify-content: center;
@@ -66,31 +67,75 @@ const NavItem = styled.li`
         transition: .3s;
         transform: translateY(-5px);
     }
-                
+    
     @media screen and (max-width: 375px) {
         margin-bottom: 20px;
         font-size: 26px;
     }
-                
+
+    @media screen and (max-width: 970px) {
+        margin-bottom: 20px;
+        font-size: 30px;
+        background-color: #1b1d49;
+    }
+
     a {
         color: #ffffff;
-                    
+
+        @media screen and (max-width: 970px) {
+            background-color: #1b1d49;
+        }
+        
         span {
             color: #06c58c;
         }
-
+        
         &:hover {
             color: #06c58c;
         }
     }
 `
 
+const Toggle = styled.div`
+    div {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 8px;
+        transition: transform .5s ease;
+    }
+
+    :nth-child(1) {
+        transform: ${({ estaAtivo }) => estaAtivo ? "rotate(45deg)            translate(7px, 7px)" : "none"};
+    }
+
+    :nth-child(2) {
+        opacity: ${({ estaAtivo }) => estaAtivo ? 0 : 1 };
+    }
+
+    :nth-child(3) {
+        transform: ${({ estaAtivo }) => estaAtivo ? "rotate(-45deg) translate(7px, -7px)" : "none"};
+    }
+
+    @media screen and (min-width: 970px) {
+        display: none;
+    }
+`
+
+
 const Header = () => {
+    const [estaAtivo, setEstaAtivo] = useState(false);
+
+    function menuToggle() {
+        setEstaAtivo(!estaAtivo)
+        console.log(estaAtivo);
+    }
+
     return (
         <Cabecalho>
         <Logo href="#">L</Logo>
         <nav>
-            <NavList>
+            <NavList estaAtivo={estaAtivo}>
                 <NavItem>
                     <a href="#">
                         <span>I. </span>
@@ -116,11 +161,11 @@ const Header = () => {
                     </a>
                 </NavItem>
             </NavList>
-            <div>
+            <Toggle onClick={menuToggle} estaAtivo={estaAtivo}>
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </Toggle>
             </nav>
         </Cabecalho>
 
