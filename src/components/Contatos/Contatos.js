@@ -18,6 +18,22 @@ const Section = styled.section`
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center; 
+        row-gap: 40px;
+    }
+
+    @media screen and (max-width: 510px) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        justify-items: center; 
+        row-gap: 20px;
+    }
 `
 const Item = styled.div`
     display: flex;

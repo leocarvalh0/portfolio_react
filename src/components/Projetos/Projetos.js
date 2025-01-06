@@ -39,6 +39,11 @@ const ContainerBase = styled.div`
     align-items: center;
     margin-bottom: 150px;
 
+    @media screen and (max-width: 924px) {
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+
     img {
         width: 480px;
         height: 300px;
@@ -47,6 +52,16 @@ const ContainerBase = styled.div`
 
         &:hover {
             box-shadow: 20px 20px rgb(11, 131, 95);
+        }
+
+        @media screen and (max-width: 670px) {
+            width: 380px;
+            height: 200px;
+        }
+
+        @media screen and (max-width: 424px) {
+            width: 340px;
+            height: 200px;
         }
     }
 `;
@@ -58,6 +73,20 @@ const ProjetoBase = styled.div`
     justify-content: space-around;
     text-align: ${({ reverse }) => (reverse ? "left" : "right")};
     margin: ${({ reverse }) => (reverse ? "0 0 0 70px" : "0 70px 0 0")};
+
+    @media screen and (max-width: 924px) {
+        text-align: left;
+        width: 60%;
+        margin: 0 auto 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 670px) {
+        width: 100%;
+    }
 `;
 
 const TituloProjeto = styled.h3`
@@ -75,6 +104,10 @@ const Tecnologias = styled.div`
     display: flex;
     justify-content: ${({ reverse }) => (reverse ? "flex-start" : "flex-end")};
     gap: 16px;
+
+    @media screen and (max-width: 924px) {
+        justify-content: flex-start;
+    }
 
     span {
         font-size: 14px;
@@ -97,6 +130,7 @@ const Icon = styled.div`
 
     @media screen and (max-width: 970px) {
         font-size: 2rem;
+        margin: 0 16px 0 0;
     }
 `;
 

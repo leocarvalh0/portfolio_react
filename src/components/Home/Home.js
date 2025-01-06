@@ -7,6 +7,10 @@ const Section = styled.section`
     justify-content: center;
     margin-bottom: 300px;
 
+    @media screen and (max-width: 482px) {
+        margin-top: 6px;
+    }
+
     p {
         font-size: 18px;
 
@@ -74,6 +78,10 @@ const Descricao = styled.p`
     max-width: 720px;
     line-height: 40px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 482px) {
+        margin-bottom: 10px;
+    }
 
     @media screen and (max-width: 375px) {
         width: 100%;

@@ -32,6 +32,10 @@ const Linha = styled.div`
 
 const Infos = styled.div`
     display: flex;
+
+    @media screen and (max-width: 770px) {
+        display: grid;
+    }
 `
 
 const Texto = styled.p`
@@ -48,6 +52,10 @@ const Foto = styled.img`
 
     &:hover {
         box-shadow: 20px 20px rgb(11, 131, 95);
+    }
+
+    @media screen and (max-width: 770px) {
+        margin: 80px auto;
     }
 `
 
@@ -68,6 +76,11 @@ const Button = styled.button`
     &:hover {
         transform: translateY(-5px) translateX(-5px);
         box-shadow: 5px 5px 0 #06c58c;
+    }
+
+    @media screen and (max-width: 440px) {
+        padding: 10px;
+        margin-right: 24px;
     }
 `
 

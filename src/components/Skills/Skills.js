@@ -47,6 +47,12 @@ const Item = styled.div`
     align-items: center;
     cursor: pointer;
     transition: all .3s ease;
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 440px) {
+        width: 100px;
+        height: 100px;
+    }
 
     &:hover {
         transform: scale(1.1);
@@ -72,9 +78,14 @@ const Icon = styled.div`
 `
 
 const SkillsContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+
+    @media screen and (max-width: 440px) {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
 `
 
 const Skills = () => {
@@ -109,8 +120,6 @@ const Skills = () => {
                 <p>Figma</p>
                 <Icon as={FaFigma} />
             </Item>         
-        </SkillsContainer>
-        <SkillsContainer>
             <Item>
                 <p>HTML</p>
                 <Icon as={ImHtmlFive2} />
