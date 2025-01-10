@@ -88,6 +88,10 @@ const NavItem = styled.li`
         
         span {
             color: #06c58c;
+        
+            @media screen and (max-width: 970px) {
+                background-color: #1b1d49;
+            }
         }
         
         &:hover {
@@ -137,25 +141,25 @@ const Header = () => {
         <nav>
             <NavList estaAtivo={estaAtivo}>
                 <NavItem>
-                    <a href="#">
+                    <a href="#sobre">
                         <span>I. </span>
                         Sobre
                     </a>
                 </NavItem>
                 <NavItem>
-                    <a href="#">
+                    <a href="#skills">
                         <span>II. </span>
                         Skills
                     </a>
                 </NavItem>
                 <NavItem>
-                    <a href="#">
+                    <a href="#projetos">
                         <span>III. </span>
                         Projetos
                     </a>
                 </NavItem>
                 <NavItem>
-                    <a href="#">
+                    <a href="#contato">
                         <span>IV. </span>
                         Contato
                     </a>

@@ -1,13 +1,13 @@
 import EstiloGlobal from "./styles";
 import { Container } from "./styles";
 
-import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
-import Sobre from "./components/Sobre/Sobre";
-import Skills from "./components/Skills/Skills";
-import SocialLinks from "./components/SocialLinks/SocialLinks";
-import Projetos from "./components/Projetos/Projetos";
-import Contatos from "./components/Contatos/Contatos";
+import Header from "./sections/Header/Header";
+import Home from "./sections/Home/Home";
+import Sobre from "./sections/Sobre/Sobre";
+import Skills from "./sections/Skills/Skills";
+import SocialLinks from "./sections/SocialLinks/SocialLinks";
+import Projetos from "./sections/Projetos/Projetos";
+import Contatos from "./sections/Contatos/Contatos";
 
 function App() {
   return (

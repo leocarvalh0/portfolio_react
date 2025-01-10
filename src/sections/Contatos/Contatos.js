@@ -3,10 +3,14 @@ import { FaGithub  } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";import { MdEmail } from "react-icons/md";
 
-
 const Section = styled.section`
-    padding-bottom: 300px;
+    margin-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
+
+    @media screen and (max-width: 769px) {
+        padding-bottom: 50px;
+    }
 
     h2 {
         font-size: 40px;
@@ -84,7 +88,7 @@ const Icon = styled.div`
 
 const Contatos = () => {
     return (
-        <Section>
+        <Section id="contato">
             <h2>Contatos</h2>
             <Container>
                 <Item>

@@ -8,7 +8,7 @@ const Section = styled.section`
     margin-bottom: 300px;
 
     @media screen and (max-width: 482px) {
-        margin-top: 6px;
+        margin-bottom: 200px;
     }
 
     p {

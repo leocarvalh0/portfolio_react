@@ -1,37 +1,7 @@
 import styled, { css } from "styled-components";
+import Subtitle from "../../components/Subtitle"
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
-
-const Section = styled.section`
-    margin-bottom: 300px;
-`;
-
-    const Header = styled.header`
-    display: flex;
-    margin-bottom: 80px;
-`;
-
-const Titulo = styled.h2`
-    font-size: 30px;
-    margin-bottom: 80px;
-    color: #ccd6f6;
-    font-family: 'Pixelify Sans', sans-serif;
-    
-    &::before {
-        content: ".";
-        width: 2px;
-        margin-right: 16px;
-        background-color: #06c58c;
-    }
-`
-
-const Linha = styled.div`
-    background-color: rgb(68, 68, 68);
-    width: 300px;
-    height: 2px;
-    margin-top: 20px;
-    margin-left: 30px;
-`
 
 const ContainerBase = styled.div`
     display: flex;
@@ -154,11 +124,8 @@ const Projeto = ({ title, description, technologies, reverse, image }) => (
 );
 
 const Projetos = () => (
-    <Section>
-        <Header>
-            <Titulo>Projetos</Titulo>
-            <Linha />
-        </Header>
+    <section id="projetos">
+        <Subtitle titulo="Projetos" />
         <Projeto
             title="Clone Disney+"
             description="Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
@@ -178,7 +145,7 @@ const Projetos = () => (
             technologies={["Vue"]}
             image="images/tarefas.png"
         />
-    </Section>
+    </section>
 );
 
 export default Projetos;
