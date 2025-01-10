@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import coin from "../../assets/coin.gif"
 
 const Section = styled.section`
     height: 80vh;
@@ -23,7 +24,6 @@ const Section = styled.section`
         }
     }
 `
-
 const Saudacao = styled.p`
     color: #06c58c;
     font-family: 'Pixelify Sans', sans-serif;  
@@ -35,6 +35,34 @@ const Titulo = styled.h1`
     color: #ccd6f6;
     font-family: 'Pixelify Sans', sans-serif;
     text-transform: uppercase;
+    white-space: nowrap;
+
+    img {
+        height: 64px;
+        position: relative;
+        top: 13px;
+        right: 53px;
+        background-color: transparent;
+
+        @media screen and (max-width: 1024px) {
+            height: 53px;
+            right: 45px;
+            top: 11px;
+        }
+            
+        @media screen and (max-width: 768px) {
+            height: 45px;
+            right: 39px;
+            top: 10px;
+        }
+
+        @media screen and (max-width: 482px) {
+            height: 34px;
+            right: 29px;
+            top: 8px;
+        }
+
+    }
 
     @media screen and (max-width: 1024px) {
         font-size: 5.0rem;
@@ -125,7 +153,9 @@ const Home = () => {
     return (
         <Section>
             <Saudacao>Olá, meu nome é</Saudacao>
-            <Titulo>Leonardo Carvalho.</Titulo>
+            <Titulo>Leonardo Carvalh
+                <img src={coin} alt="Moeda girando" />
+                </Titulo>
             <SubTitulo>Sou desenvolvedor Front End.</SubTitulo>
             <Descricao>Especializado em criar interfaces atraentes e funcionais com HTML, CSS e JavaScript. Com experiência em frameworks modernos como React e Vue.js, busco sempre transformar ideias em experiências digitais envolventes. Vamos fazer algo incrível juntos!</Descricao>
             <Botao>Conheça meu trabalho!</Botao>
