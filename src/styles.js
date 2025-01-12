@@ -34,4 +34,18 @@ export const Container = styled.div`
     }
 `
 
+export const Button = styled.button`
+    font-size: 16px;
+    font-weight: bold;
+    color: #06c58c;     
+    cursor: pointer; 
+    border: 1px solid #06c58c;
+    border-radius: 10px;
+
+    &:hover {
+        transform: translateY(-5px) translateX(-5px);
+        box-shadow: 5px 5px 0 #06c58c;
+    }
+`
+
 export default EstiloGlobal
