@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import {Icon} from "../../styles"
 
 export const ContainerBase = styled.div`
     display: flex;
@@ -82,11 +83,8 @@ export const Tecnologias = styled.div`
     }
 `;
 
-export const Icon = styled.div`
-    font-size: 24px;
-    fill: #06c58c;
+export const IconCustom = styled(Icon)`
     margin-top: 16px;
-    cursor: pointer;
     transition: transform 0.5s;
     text-align: ${({ reverse }) => (reverse ? "left" : "right")};
     margin: ${({ reverse }) => (reverse ? "0 16px 0 0" : "0 0 0 16px")};
@@ -96,7 +94,6 @@ export const Icon = styled.div`
     }
 
     @media screen and (max-width: 970px) {
-        font-size: 2rem;
         margin: 0 16px 0 0;
     }
 `

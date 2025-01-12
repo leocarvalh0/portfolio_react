@@ -1,17 +1,17 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { Links, Icon } from "./SocialLinks.styles"
+import { Links, IconCustom } from "./SocialLinks.styles"
 
 const SocialLinks = () => {
     return (
         <Links>
             <a href="https://github.com/leocarvalh0" target="_blank">
-                <Icon as={FaGithub}/> 
+                <IconCustom as={FaGithub} padrao /> 
             </a>
             <a href="https://www.linkedin.com/in/leonardo-carvalho-ramos/" target="_blank">
-                <Icon as={FaLinkedin} />
+                <IconCustom as={FaLinkedin} padrao />
             </a>
             <a href="https://github.com/leocarvalh0https://www.instagram.com/leonard0_carvalho/" target="_blank">
-                <Icon as={FaInstagram} />
+                <IconCustom as={FaInstagram} padrao />
             </a>
         </Links>
     )

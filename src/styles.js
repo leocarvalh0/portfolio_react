@@ -48,4 +48,14 @@ export const Button = styled.button`
     }
 `
 
+export const Icon = styled.div`
+    font-size: 24px;
+    cursor: pointer;
+    fill: ${(props) => props.padrao ? '#ccd6f6' : '#06c58c'};
+
+    @media screen and (max-width: 970px) {
+        font-size: 2.0rem;
+    }
+`
+
 export default EstiloGlobal

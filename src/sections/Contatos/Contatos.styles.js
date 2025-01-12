@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Icon} from "../../styles"
 
 export const Section = styled.section`
     margin-top: 200px;
@@ -71,12 +72,6 @@ export const IconDiv = styled.div`
         color: #06c58c;
     }
 `
-export const Icon = styled.div`
-    background-color: transparent;
+export const IconCustom = styled(Icon)`
     font-size: 30px;
-    fill: #06c58c;
-
-    @media screen and (max-width: 970px) {
-        font-size: 2.0rem;
-    }
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Icon} from "../../styles"
 
 export const Links = styled.div`
     display: flex;
@@ -38,12 +39,6 @@ export const Links = styled.div`
     }
 `
 
-export const Icon = styled.div`
-    font-size: 24px;
+export const IconCustom = styled(Icon)`
     margin-bottom: 40px;
-    fill: #ccd6f6;
-
-    @media screen and (max-width: 970px) {
-        font-size: 2.0rem;
-    }
-`;
+`

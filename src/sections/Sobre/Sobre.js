@@ -1,5 +1,6 @@
 import Subtitle from "../../components/Subtitle"
 import { Infos, Texto, Foto, ButtonsContainer, ButtonCustom } from "./Sobre.styles"
+import eu from "../../assets/eu.jpg"
 
 const Sobre = () => {
     return (
@@ -14,7 +15,7 @@ const Sobre = () => {
                         <ButtonCustom>Dowload CV</ButtonCustom>
                     </ButtonsContainer>
                 </div>
-                <Foto src="/images/eu.jpg" alt="Minha foto" />
+                <Foto src={eu} alt="Minha foto" />
             </Infos>
     </section>
     )
