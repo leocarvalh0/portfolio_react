@@ -6,7 +6,6 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 300px;
 
     @media screen and (max-width: 482px) {
         margin-bottom: 200px;

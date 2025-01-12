@@ -92,7 +92,7 @@ const Contatos = () => {
             <h2>Contatos</h2>
             <Container>
                 <Item>
-                    <IconDiv>
+                    <IconDiv >
                         <Icon as={MdEmail} />
                     </IconDiv>
                     <p>E-mail</p>
@@ -106,16 +106,21 @@ const Contatos = () => {
                     <a>(11) 98293-5925</a>
                 </Item>
                 <Item>
-                    <IconDiv>
-                        <Icon as={FaLinkedin} />
-                    </IconDiv>
+                    <a href="https://www.linkedin.com/in/leonardo-carvalho-ramos/" target="_blank">
+                        <IconDiv>
+                            <Icon as={FaLinkedin} />
+                        </IconDiv>
+                    </a>
                     <p>Linkedin</p>
-                    <a>leocarvalh0</a>
+                    <a>Leonardo Carvalho</a>
                 </Item>
                 <Item>
-                    <IconDiv>
-                        <Icon as={FaGithub} />
-                    </IconDiv>
+                    <a href="https://github.com/leocarvalh0" target="_blank">
+                        <IconDiv>
+                            <a href="https://github.com/leocarvalh0" />
+                            <Icon as={FaGithub} />
+                        </IconDiv>
+                    </a>
                     <p>Github</p>
                     <a>@leocarvalh0</a>
                 </Item>

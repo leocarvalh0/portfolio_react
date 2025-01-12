@@ -41,7 +41,7 @@ const Links = styled.div`
     }
 `
 
-const Icon = styled.div`
+const Icon = styled.a`
     font-size: 24px;
     margin-bottom: 40px;
     fill: #ccd6f6;
@@ -54,9 +54,15 @@ const Icon = styled.div`
 const SocialLinks = () => {
     return (
         <Links>
-            <Icon as={FaGithub} />
-            <Icon as={FaLinkedin} />
-            <Icon as={FaInstagram} />
+            <a href="https://github.com/leocarvalh0" target="_blank">
+                <Icon as={FaGithub}/> 
+            </a>
+            <a href="https://www.linkedin.com/in/leonardo-carvalho-ramos/" target="_blank">
+                <Icon as={FaLinkedin} />
+            </a>
+            <a href="https://github.com/leocarvalh0https://www.instagram.com/leonard0_carvalho/" target="_blank">
+                <Icon as={FaInstagram} />
+            </a>
         </Links>
     )
 }

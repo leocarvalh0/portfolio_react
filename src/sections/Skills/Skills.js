@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Subtitle from "../../components/Subtitle"
+import cat from "../../assets/nian-cat.gif"
 
 import { ImHtmlFive2 } from "react-icons/im";
 import { SiCss3 } from "react-icons/si";
@@ -58,6 +59,16 @@ const SkillsContainer = styled.div`
     }
 `
 
+const Gato = styled.img`
+    position: relative;
+    bottom: 200px;
+    left: 820px;
+
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+`
+
 const Skills = () => {
     return (
         <section id="skills">
@@ -112,6 +123,7 @@ const Skills = () => {
                     <Icon as={FaFigma} />
                 </Item>         
             </SkillsContainer>
+            <Gato src={cat} alt="Gato voando com balão" />
         </section>
     )
 }

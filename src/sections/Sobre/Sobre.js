@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Subtitle from "../../components/Subtitle"
+import grogu from "../../assets/grogu.gif"
 
 const Infos = styled.div`
     display: flex;
@@ -55,9 +56,31 @@ const Button = styled.button`
     }
 `
 
+const Personagem = styled.img`
+    height: 112px;
+    position: relative;
+    top: 220px;
+    left: 400px;
+
+    @media screen and (max-width: 580px) {
+        left: 280px;
+    }
+
+    @media screen and (max-width: 482px) {
+        position: absolute;
+        left: 300px;
+        top: 874px;
+    }
+
+    @media screen and (max-width: 442px) {
+        left: 240px;
+    }
+`
+
 const Sobre = () => {
     return (
         <section id="sobre">
+            <Personagem src={grogu} alt="" />
             <Subtitle titulo="Sobre mim" />
             <Infos>
                 <div>

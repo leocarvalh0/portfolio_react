@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const TituloContainer = styled.div`
     display: flex;
-    margin-top: 300px;
+    margin-top: 200px;
 
     @media screen and (max-width: 482px) {
         margin-top: 100px;
@@ -29,6 +29,14 @@ const Linha = styled.div`
     height: 2px;
     margin-top: 20px;
     margin-left: 30px;
+
+    @media screen and (max-width: 580px) {
+        width: 200px;
+    }
+
+    @media screen and (max-width: 442px) {
+        width: 130px;
+    }
 `
 const Subtitle = (props) => {
     return (
