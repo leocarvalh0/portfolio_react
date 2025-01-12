@@ -59,15 +59,15 @@ const SkillsContainer = styled.div`
     }
 `
 
-const Gato = styled.img`
-    position: relative;
-    bottom: 200px;
-    left: 820px;
+// const Gato = styled.img`
+//     position: relative;
+//     bottom: 200px;
+//     left: 820px;
 
-    @media screen and (max-width: 1200px) {
-        display: none;
-    }
-`
+//     @media screen and (max-width: 1200px) {
+//         display: none;
+//     }
+// `
 
 const Skills = () => {
     return (
@@ -123,7 +123,7 @@ const Skills = () => {
                     <Icon as={FaFigma} />
                 </Item>         
             </SkillsContainer>
-            <Gato src={cat} alt="Gato voando com balão" />
+            {/* <Gato src={cat} alt="Gato voando com balão" /> */}
         </section>
     )
 }

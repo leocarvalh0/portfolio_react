@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import Subtitle from "../../components/Subtitle"
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
+import grogu from "../../assets/grogu.gif"
 
 const ContainerBase = styled.div`
     display: flex;
@@ -102,7 +103,28 @@ const Icon = styled.div`
         font-size: 2rem;
         margin: 0 16px 0 0;
     }
-`;
+`
+
+const Personagem = styled.img`
+    height: 112px;
+    position: relative;
+    top: 220px;
+    left: 400px;
+
+    @media screen and (max-width: 580px) {
+        left: 280px;
+    }
+
+    @media screen and (max-width: 482px) {
+        position: absolute;
+        left: 300px;
+        top: 874px;
+    }
+
+    @media screen and (max-width: 442px) {
+        display: none;
+    }
+`
 
 const Projeto = ({ title, description, technologies, reverse, image }) => (
     <ContainerBase reverse={reverse}>
@@ -125,6 +147,7 @@ const Projeto = ({ title, description, technologies, reverse, image }) => (
 
 const Projetos = () => (
     <section id="projetos">
+        <Personagem src={grogu} alt="" />
         <Subtitle titulo="Projetos" />
         <Projeto
             title="Clone Disney+"
